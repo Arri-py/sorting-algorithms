@@ -3,11 +3,13 @@
 #include <ctime>
 #include <clocale>
 
+
 void FillInc(int arr[], int size) { // заполныет массив возрастающими значениями
     for (int i = 0; i < size; i++) {
         arr[i] = i + 1;
     }
 }
+
 
 void FillDec(int arr[], int size) { // заполныет массив убыаающими значениями
     for (int i = 0; i < size; i++) {
@@ -15,13 +17,15 @@ void FillDec(int arr[], int size) { // заполныет массив убыа�
     }
 }
 
-void FillRand(int arr[], int size, int min, int max) {
+
+void FillRand(int arr[], int size, int min, int max) { // заполняет массив рандомными значеними
     for (int i = 0; i < size; ++i) {
         arr[i] = min + rand() % (max - min + 1);
     }
 }
 
-int CheckSum(int arr[], int size) {
+
+int CheckSum(int arr[], int size) { // возвращает контрольную сумму (сумму всех элементов массива)
     int sum = 0;
     for (int i = 0; i < size; i++) {
         sum += arr[i];
@@ -29,7 +33,8 @@ int CheckSum(int arr[], int size) {
     return sum;
 }
 
-int RunNumber(int arr[], int size) {
+
+int RunNumber(int arr[], int size) { // возвращает число возрастающих серий в массиве
     int series = 1;
     for (int i = 1; i < size; i++) {
         if (arr[i] < arr[i - 1]) {
@@ -39,7 +44,8 @@ int RunNumber(int arr[], int size) {
     return series;
 }
 
-void SelectSort(int arr[], int size, int& M, int& C) {
+
+void SelectSort(int arr[], int size, int& M, int& C) { // сортирует при помощи SelectSort
     M = 0;
     C = 0;
 
@@ -59,7 +65,8 @@ void SelectSort(int arr[], int size, int& M, int& C) {
     }
 }
 
-void SelectSort_opti(int arr[], int size, int& M, int& C) {
+
+void SelectSort_opti(int arr[], int size, int& M, int& C) { // сортирует при помощи SelectSort но без фиктивных перестановок
     M = 0;
     C = 0;
 
@@ -82,8 +89,7 @@ void SelectSort_opti(int arr[], int size, int& M, int& C) {
 }
 
 
-
-void BubbleSort(int arr[], int size, int& M, int& C) {
+void BubbleSort(int arr[], int size, int& M, int& C) { // сортирует при помощи BubbleSort
     M = 0;
     C = 0;
 
@@ -103,7 +109,7 @@ void BubbleSort(int arr[], int size, int& M, int& C) {
 }
 
 
-void BubbleSort_opti(int arr[], int size, int& M, int& C) {
+void BubbleSort_opti(int arr[], int size, int& M, int& C) {  // оптимизированный бабл сорт 
     M = 0;
     C = 0;
 
